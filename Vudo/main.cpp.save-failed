@@ -1,0 +1,52 @@
+//Yamil Kas-Danouche
+//
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string x;
+    double a,n,q;
+    int x,i;
+    unsigned seed = time(0);
+    srand(seed);
+    while (i = 0)
+    {
+        cout << "if you want to quit this program, enter x" << endl;
+        cin >> x;
+        if (x=='x')
+        {
+        i = true;
+        break;
+        }
+        else
+        {
+             a = rand()%10 +1 ;
+    cout << "Think of a number in your head from 1 to 100 and when you are ready enter 1" << endl;
+    cin >> q;
+    cout << "now double it, when you are ready enter 1" << endl;
+    cin >> q;
+    cout <<"Now add " << a << " to your number, when you are ready enter 1" << endl;
+    cin >> q;
+    cout << "Divide your result by 2, when you are ready enter 1" << endl;
+    cin >> q;
+    cout << "subtract your the original number that you thought to your result, when you are ready enter 1" << endl;
+    cin >> q;
+    cout << "Now I, the Oraculus program, will guess what your number is, ready for my guess? enter 1 if you are " << endl;
+    cin >> q;
+    n = a/2;
+    cout << n ;
+        }
+
+    }
+
+
+
+
+
+    return 0;
+}

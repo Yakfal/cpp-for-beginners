@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1602048132 source:c:\users\yakfal\desktop\computer science\allarray\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+

@@ -1,0 +1,29 @@
+//Yamil Kas-Danouche
+//08/31/2020
+//
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int begMiles;
+    int endMiles;
+    int gallonsused;
+    int MPG;
+
+
+    cout << "Enter Beg Miles";
+    cin >> begMiles;
+    cout << "Enter end Miles";
+    cin >> endMiles;
+    cout << "Enter Gallons Used";
+    cin >> gallonsused >> endl;
+    MPG = (endMiles-begMiles)/gallonsused;
+    cout << "Beg Miles: " << begMiles << endl;
+    cout << "End Miles: " << endMiles << endl;
+    cout << "Gallons Used: " << gallonsused << endl;
+    cout <<" MPG: "<< MPG << endl;
+    return 0;
+}

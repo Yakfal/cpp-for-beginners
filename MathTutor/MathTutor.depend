@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1600453785 source:c:\users\yakfal\desktop\computer science\mathtutor\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

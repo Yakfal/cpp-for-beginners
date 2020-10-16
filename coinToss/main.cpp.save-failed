@@ -1,0 +1,36 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <string>
+
+using namespace std;
+int main()
+{
+    int a,b;
+    unsigned seed = time(0);
+    srand(seed);
+    char x;
+    string heads , tails;
+
+    do{
+         a = rand()%2;
+    cout << "enter your guess, will it be heads or tails? (1/0)" << endl;
+    cin >> b;
+
+    if (b == 1 || b == 0)
+    {
+        if (b == a)
+        cout << "You guessed correctly" << endl;
+        else
+        cout << "Try again, you guessed wrong" << endl;
+    }
+    else
+    cout << "the answer you enter can't be processed" << endl;
+cout << "wanna try it again? (Y/N)" << endl;
+cin >> x;
+    }
+while ( x == 'y' || x == 'Y');
+
+    return 0;
+
+}

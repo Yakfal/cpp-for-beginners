@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1602515762 source:c:\users\yakfal\desktop\computer science\quarterlysales\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+

@@ -1,0 +1,64 @@
+/*
+Write a program that will create an array of size 5.
+The program will ask the user to enter the sales for monday,
+tuesday, wednesday, thrusday and friday.
+Determine which day has the highest sales, which day has the lowest sales.
+
+Also determine the total and average sales for the week.
+
+
+*/
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+int main()
+{
+double Sales[5];
+const char*HighesSales[5]={"monday","tuesday","wednesday","thursday","friday"};
+const char*LowestSales[5]={"monday","tuesday","wednesday","thursday","friday"};
+for(int i=0; i<5; i++){
+
+
+cout<<"Enter day "<<(i+1)<<" daily sales: ";
+
+cin>>Sales[i];
+
+}
+
+
+double HighestSales = Sales[0], LowestSales = Sales[0],AverageSale = 0.0;
+
+HighStoreNumber = 0, LowStoreNumber= 0;
+for(int i=0; i<5; i++){
+
+if(HighestSales<Sales[i]){
+HighestSales = Sales[i];
+HighStoreNumber = i;
+
+}
+
+if(LowestSales > Sales[i]){
+LowestSales = Sales[i];
+LowStoreNumber= i;
+
+}
+AverageSale += Sales[i];
+
+}
+
+AverageSale /= 5;
+
+cout<<setprecision(2)<<fixed;
+
+cout<<"Highest Sale: "<<HighestSales<<", day: "<<(HighStoreNumber+1)<<endl;
+
+cout<<"Lowest Sale: "<<LowestSales<<", day: "<<(LowStoreNumber+1)<<endl;
+
+cout <<"day 1 = Monday; day 2 = Tuesday, day 3 = Wednesday; day 4 = Thursday ; day 5 = Friday" << endl;
+
+cout<<"Average Sale: "<<AverageSale<<endl;
+
+return 0;
+
+}

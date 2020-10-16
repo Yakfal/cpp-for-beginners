@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1602738521 source:c:\users\yakfal\desktop\computer science\salesbarchart\main.cpp
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<ctime>
+	<string>
+

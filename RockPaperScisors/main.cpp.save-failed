@@ -1,0 +1,119 @@
+//Write a program that lest the user play the game of Rock, Paper, Scissors against the computer. The program should work as follows.
+
+//When the program begins, a random number in the range of 1 through 3 is generated.  If the number is 1, than the computer has chosen rock.  If the number is 2 then the computer has chosen paper.  If the number is 3, then the computer has chosen scissors.  (don’t display the computer’s choice yet.
+
+//The user enters his or her choice of “rock”, “paper”, or “scissors” at the key-board. (you can use a menu if you prefer)
+
+//The computer’s choice is displayed
+
+//A winner is selected according the to following rules:
+
+//If one player chooses rock and the computer chooses scissors, than rock wins (the rock smashes the scissors.)
+
+//If one player chooses scissors and the computerr chooses paper, then scissors win. (scissors cut paper)
+
+//If one player chooses paper and the computer chooses rock, then paper wins (paper wraps rock)
+
+//If both players make the same choice, the game must be played again to determine the winner.
+
+//Be sure to keep track of the number of wins for the player and computer.
+
+//Program should run until the player is finished with the game.
+
+//When players is finished running the program, it should display the total wins and determine the winner.
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+int winner(int c, int u);
+int numcwin, numuwin;
+char x;
+
+int main()
+{
+
+numcwin = 0;
+numuwin = 0;
+      unsigned seed = time(0);
+    srand(seed);
+
+    int computerChoice = rand()%3 +1;
+do
+    {
+
+    cout << "computerChoice" << endl;
+
+    int userChoice = 0;
+
+    cout << " Choose Rock, Paper, or scissors" << endl;
+    cout << "1,2 or 3" << endl;
+    cin >>userChoice;
+
+    if (computerChoice == 1)
+        cout << "The computer chose rock"<< endl;
+        else if (computerChoice == 2)
+        cout << "The computer chose paper"<< endl;
+        else if (computerChoice == 3)
+    cout << "The computer chose scissors"<< endl;
+    else
+        cout << "choose a number from 1 to 3 (1:rock, 2:paper, 3 :scissors" << endl;
+
+int win = winner(computerChoice, userChoice);
+cout << "wanna try it again? (Y/N)" << endl;
+  cin >> x;
+
+    }while (x == 'y'|| x== 'Y');
+cout <<"computer wins : " << numcwin << endl;
+cout <<"Your wins : " << numuwin << endl;
+    return 0;
+}
+
+int winner (int c, int u)
+{
+  if ( c == u || u == c)
+  {
+     cout << "it's a tie"<< endl;
+     numcwin = numcwin;
+     numuwin = numuwin;
+  }
+
+else if (c == 1 && u == 2)
+{
+    cout <<"You win" << endl;
+    numcwin = numcwin;
+     numuwin = numuwin+1;
+}
+
+    else if (c == 2 && u == 3)
+    {
+        cout <<"You win" << endl;
+        numcwin = numcwin;
+     numuwin = numuwin+1;
+    }
+
+    else if (c == 3 && u == 1)
+    {
+        cout <<"You win"<< endl;
+        numcwin = numcwin;
+     numuwin = numuwin+1;
+    }
+
+    else
+    {
+        cout <<"computer wins" << endl;
+        numcwin = numcwin+1;
+     numuwin = numuwin;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+

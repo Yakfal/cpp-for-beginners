@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double tax;
+    double bc;
+    double tip;
+    double mc;
+    double tb;
+
+    bc = tax+mc;
+    tip = 0.15*bc;
+    tb = bc+tip;
+
+    cout << "Enter Bill amount:" << endl;
+    cin >> mc;
+    tax = 0.0657*mc;
+    cout << "Meal Cost:" << mc << endl;
+     cout << "Taxes:" << tax << endl;
+     cout << "Tips:" << tip << endl;
+     cout << "Total Bill:" << tb << endl;
+
+
+    return 0;
+}

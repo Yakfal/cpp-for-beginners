@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1600904348 source:c:\users\yakfal\desktop\computer science\cointoss\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+

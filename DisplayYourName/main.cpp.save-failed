@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Yamil Kas-Danouche";
+    cout << "Yamil Kas-Danouche";
+    cout << "Yamil Kas-Danouche";
+    cout << "Yamil Kas-Danouche";
+    cout << "Yamil Kas-Danouche";
+    return 0;
+}

@@ -1,0 +1,101 @@
+/*
+Write a program that asks the user to enter today’s sales for five stores.
+The program should then display a bar graph comparing each store’s sales.
+Create each bar in the bar graph by displaying a row of asterisks.
+Each asterisk should represent $100 of sales.
+
+
+
+Here is an example of the program’s output.
+
+
+
+Enter today’s sales for store 1:  1000
+
+Enter today’s sales for store 2:  1200
+
+Enter today’s sales for store 3:  1800
+
+Enter today’s sales for store 4:  800
+
+Enter today’s sales for store 5:  1900
+
+
+
+SALES BAR CHART:
+
+--------------------------
+
+Store 1:  **********
+
+Store 2:  ************
+
+Store 3:  ******************
+
+Store 4:  ********
+
+Store 5:  *******************
+
+*/
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int highest,lowest;
+    int table[4][1];
+    double sumrow = 0;
+    for (int row = 0 ; row < 5; row++ )
+    {
+        cout << "enter todays sales for store 1"<< endl;
+        cin >> table[0][1];
+        cout << "enter todays sales for store 2"<< endl;
+        cin >> table[1][1];
+        cout << "enter todays sales for store 3"<< endl;
+        cin >> table[2][1];
+        cout << "enter todays sales for store 4"<< endl;
+        cin >> table[3][1];
+        cout << "enter todays sales for store 5"<< endl;
+        cin >> table[4][1];
+
+    }
+        cout << "\nSALES BAR CHART" << endl;
+        cout << "(Each * = $100)" << endl;
+        cout << "Store 1: ";
+    for (int i = table [0][1]; i < table1 [0][1]; i++)
+        cout << '*';
+         cout << "\nSALES BAR CHART" << endl;
+    cout << "(Each * = $100)" << endl;
+    cout << "Store 2: ";
+    for (int i = table [1][1]; i < table [1][1]; i++)
+        cout << '*';
+
+    cout << endl; cout << "\nSALES BAR CHART" << endl;
+    cout << "(Each * = $100)" << endl;
+    cout << "Store 3: ";
+    for (int i = table[2][1]; i < table[2][1]; i++)
+        cout << '*';
+
+    cout << endl; cout << "\nSALES BAR CHART" << endl;
+    cout << "(Each * = $100)" << endl;
+    cout << "Store 4: ";
+    for (int i = table[3][1]; i < table[3][1]; i++)
+        cout << '*';
+
+    cout << endl; cout << "\nSALES BAR CHART" << endl;
+    cout << "(Each * = $100)" << endl;
+    cout << "Store 5: ";
+    for (int i = table[4][1]; i < table[4][1]; i++)
+        cout << '*';
+
+    cout << endl;
+
+    cout << endl;
+
+    return 0;
+}
+

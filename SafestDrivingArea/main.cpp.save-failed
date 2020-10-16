@@ -1,0 +1,138 @@
+/*
+SafestDrivingArea.cpp
+
+Write a program that determines which of five geographic regions within a major city(North, South, East, West, and Central0 had the fewest reported automobile accidents last year.  It should have the following two function which are called from the main.
+
+getNumAccident. It asks the user for the number automobile accidents reported in that region during the last year, validate the input, then retruns it.  It should be called once for each city region.
+
+FindLowest.  Is passed from the main, the five accident totals.  It determines which is the smallest and prints the name of the region, along with its accident figure.
+
+
+
+Input validations:  Do not accept an accident number that is less than 0.
+
+
+*/
+
+
+
+#include <iostream>
+using namespace std;
+/* Safest Driving Area - This program determines which of five geographic
+   regions within a major city (North, South, East, West, and Central) had
+   the fewest reported automobile accidents last year. It has the following
+   two functions, called by main:
+
+   * int getNumAccidents()
+
+   * void findLowest()
+
+   Input Validation: No accident number that is less than 0 is accepted. */
+
+
+/* Prototypes: Get number of Accidents, Find region with lowest
+   accidents */
+int getNumAccidents(int, string);
+void findLowest(int, int, int, int, int);
+
+int main()
+{
+   /* Variables: Regions (North, South, East, West, Central) */
+   int regionNorth = 0,
+       regionSouth = 0,
+       regionEast = 0,
+       regionWest = 0,
+       regionCentral = 0,
+       numAccidents = 0;
+
+   /* Display: Introduction */
+   cout << "\t\tTraffic Control Center - Accident Reports\n\n"
+      << "Enter the number of accidents that occured in each\n"
+      << "of the following regions: North, South, East, West\n"
+      << "and Central"<< endl;
+
+   /* Get: Accident figures
+      Call: getNumAccidents */
+   regionNorth = getNumAccidents(numAccidents, " North: ");
+   regionSouth = getNumAccidents(numAccidents, " South: ");
+   regionEast = getNumAccidents(numAccidents, " East: ");
+   regionWest = getNumAccidents(numAccidents, " West: ");
+   regionCentral = getNumAccidents(numAccidents, " Central: ");
+
+   /* Call: findLowest */
+   findLowest(regionNorth, regionSouth, regionEast,
+              regionWest, regionCentral);
+
+   return 0;
+}
+
+/* **********************************************************
+   Definition: getNumAccidents
+
+   The name of the region is passed to this function. It asks
+   the user for the number of automobile accidents reported
+   in that region during the last year, validates the input,
+   then returns it.
+   ********************************************************** */
+
+int getNumAccidents(int accidents, string regionName)
+{
+   cout << "Accident Reports - " << regionName;
+
+   cin >> accidents;
+
+   /* Valdiation: While number of accidents is negative, a
+      message is displayed, asking the user to repeat his or
+      her input */
+   while (accidents < 0)
+   {
+      cout << "\nError! The number of traffic accidents entered\n"
+           << "is invalid. Please enter 0 if applicable, or any\n"
+           << "other number above 0.\n"
+           << "Number of accidents: " << regionName;
+      cin >> accidents;
+   }
+
+   return accidents;
+}
+
+/* **********************************************************
+   Definition: findLowest
+
+   The five accident totals are passed to this function. It
+   determines which is the smallest and prints the name of
+   the region, along with its accident figure.
+   ********************************************************** */
+
+void findLowest(int lowestNorth, int lowestSouth, int lowestEast,
+                int lowestWest, int lowestCentral)
+{
+   /* Variable: Region name */
+   string regionName = " ";
+
+   /* Variable: Lowest is initialized to lowestNorth as starting
+      value for the comparisons */
+   int lowest = lowestNorth;
+
+   /* Conditional Statements Tier 1: Determine which region has
+      had the lowest traffic accidents */
+   lowest = lowestSouth < lowest ? lowestSouth : lowest;
+   lowest = lowestEast < lowest ? lowestEast : lowest;
+   lowest = lowestWest < lowest ? lowestWest : lowest;
+   lowest = lowestCentral < lowest ? lowestCentral : lowest;
+
+   /* Conditional Statements Tier 2: The regions are assigned region
+      names for display in the report that follows */
+   regionName = lowestNorth == lowest ? " North" : regionName;
+   regionName = lowestSouth == lowest ? " South" : regionName;
+   regionName = lowestEast == lowest ? " East" : regionName;
+   regionName = lowestWest == lowest ? " West" : regionName;
+   regionName = lowestCentral == lowest ? " Central" : regionName;
+
+   /* Display: The region with the lowest accident number, along
+      with the region name */
+   cout << "\nAccident Report Summary: " << regionName << "\n"
+      << "---------------------------------------------------\n"
+      << "With " << lowest << " automobile accidents,\n"
+      << regionName << " is the safest driving area.\n";
+}

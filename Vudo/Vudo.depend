@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1600453553 source:c:\users\yakfal\desktop\computer science\vudo\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<string>
+

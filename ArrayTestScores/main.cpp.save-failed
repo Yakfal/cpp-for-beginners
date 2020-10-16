@@ -1,0 +1,125 @@
+/*
+Write a program that will create an array of size 10.
+The program will ask the user to enter the TestScores for a exam administered to 10 student.
+Determine which day has the highest score, which day has the lowest score.
+
+Also determine the average score for the exam.
+
+Also, display the score and letter grade for each element in the array of test scores.
+Grade assignment is given below.
+********
+
+If final grade is  >= 95 : course grade is A
+
+else if final grade is <95  and >=90: course grade is A-
+
+else if final grade is < 90 and >= 85 : course grade is B+
+
+else if final grade is  < 85 and >=80 : course grade is B
+
+else if final grade is <80 and >=75 : course grade is B-
+
+else if final grade is < 75 and >=70: course grade is C+
+
+else if final grade is < 70 and >=65: course grade is C
+
+else if final grade is<65 and >=60: course grade is C-
+
+else if final grade is <60 and >=55: course grade is D
+
+else if final grade is < 55: course grade is F
+
+*/
+
+
+
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+int main()
+{
+    char letterGrade,calculateLetterGrade(int);
+double Score[10];
+for(int i=0; i<10; i++){
+
+
+cout<<"Enter The per students "<<(i+1)<<" scores: ";
+
+cin>>Score[i];
+
+
+}
+
+
+double HighestScore = Score[0], LowestScore = Score[0],AverageScore = 0.0;
+
+int HighScoreNumber = 0, LowScoreNumber= 0;
+for(int i=0; i<10; i++){
+
+if(HighestScore<Score[i]){
+HighestScore = Score[i];
+HighScoreNumber = i;
+
+}
+
+if(LowestScore > Score[i]){
+LowestScore = Score[i];
+LowScoreNumber= i;
+
+}
+AverageScore += Score[i];
+
+}
+
+AverageScore /= 10;
+
+
+
+cout<<setprecision(2)<<fixed;
+
+cout<<"Highest Score: "<<HighestScore<<", day: "<<(HighScoreNumber+1)<<endl;
+
+cout<<"Lowest Score: "<<LowestScore<<", day: "<<(LowScoreNumber+1)<<endl;
+
+cout<<"Average score: "<<AverageScore<<endl;
+
+letterGrade = calculateLetterGrade(int Score);
+cout<<"Average score letter: "<<letterGrade<<endl;
+return 0;
+
+}
+ calculateLetterGrade( Score)
+{
+  if(Score>=95)
+return 'A';
+else if(Score>=90 && Score<95)
+return 'A-';
+else if(Score>=85 && Score< 90)
+return 'B+';
+else if(Score>=80 && Score< 85)
+return 'B';
+else if(Score>= 75 && Score< 80)
+return 'B-';
+else if(Score>= 70 && Score< 75)
+return 'C+';
+else if(Score>=65 && Score< 70)
+return 'C';
+else if(Score>=60 && Score< 65)
+return 'C-';
+else if(Score>=55 && Score< 60)
+return 'D';
+else
+return 'F';
+
+}
+
+
+
+
+
+
+
+
+
+
